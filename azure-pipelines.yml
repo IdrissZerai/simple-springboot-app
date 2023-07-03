@@ -15,21 +15,6 @@ pool:
 
 steps:
 - checkout: self
-# Java tool installer v0
-# Acquire a specific version of Java from a user-supplied Azure blob or the tool cache and sets JAVA_HOME.
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '8' 
-    jdkArchitectureOption:  'x64' 
-    jdkSourceOption:  'LocalDirectory' 
-    jdkFile: '%PROGRAMFILES%\Java\jdk1.8.0_202' 
-    #azureResourceManagerEndpoint: # string. Required when jdkSourceOption == AzureStorage. Azure subscription. 
-    #azureStorageAccountName: # string. Required when jdkSourceOption == AzureStorage. Storage account name. 
-    #azureContainerName: # string. Required when jdkSourceOption == AzureStorage. Container name. 
-    #azureCommonVirtualFile: # string. Required when jdkSourceOption == AzureStorage. Common virtual path. 
-    #jdkDestinationDirectory: '%PROGRAMFILES%\Java\jdk-11' 
-    #cleanDestinationDirectory: true # boolean. Optional. Use when jdkSourceOption != PreInstalled. Clean destination directory. Default: true.
-    #createExtractDirectory: true # boolean. Optional. Use when jdkSourceOption != PreInstalled. Create directory for extracting. Default: true.
 - task: Maven@3
   inputs:
     mavenPomFile: '.\simple-springboot-app\pom.xml'
