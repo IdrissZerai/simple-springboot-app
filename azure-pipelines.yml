@@ -27,7 +27,7 @@ steps:
     #azureStorageAccountName: # string. Required when jdkSourceOption == AzureStorage. Storage account name. 
     #azureContainerName: # string. Required when jdkSourceOption == AzureStorage. Container name. 
     #azureCommonVirtualFile: # string. Required when jdkSourceOption == AzureStorage. Common virtual path. 
-    #jdkDestinationDirectory: # string. Required when jdkSourceOption != PreInstalled. Destination directory. 
+    jdkDestinationDirectory: '%PROGRAMFILES%\Java\jdk-11' 
     #cleanDestinationDirectory: true # boolean. Optional. Use when jdkSourceOption != PreInstalled. Clean destination directory. Default: true.
     #createExtractDirectory: true # boolean. Optional. Use when jdkSourceOption != PreInstalled. Create directory for extracting. Default: true.
 - task: Maven@3
