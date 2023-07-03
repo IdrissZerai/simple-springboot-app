@@ -11,7 +11,10 @@ pool:
   demands: 
     - Agent.Name -equals DESKTOP-VUVTKJ8
 
+
+
 steps:
+- checkout: self
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
