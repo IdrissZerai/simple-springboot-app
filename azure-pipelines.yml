@@ -19,9 +19,9 @@ steps:
 # Acquire a specific version of Java from a user-supplied Azure blob or the tool cache and sets JAVA_HOME.
 - task: JavaToolInstaller@0
   inputs:
-    versionSpec: '8' # string. Required. JDK version. Default: 8.
-    jdkArchitectureOption: # 'x64' | 'x86'. Required. JDK architecture. 
-    jdkSourceOption: # 'AzureStorage' | 'LocalDirectory' | 'PreInstalled'. Required. JDK source. 
+    versionSpec: '8' 
+    jdkArchitectureOption:  'x64' 
+    jdkSourceOption:  'LocalDirectory' 
     #jdkFile: # string. Required when jdkSourceOption == LocalDirectory. JDK file. 
     #azureResourceManagerEndpoint: # string. Required when jdkSourceOption == AzureStorage. Azure subscription. 
     #azureStorageAccountName: # string. Required when jdkSourceOption == AzureStorage. Storage account name. 
